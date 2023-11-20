@@ -74,7 +74,11 @@ const scrapeLogic = async (res) => {
             console.log("Error triggering webhook: ", response.statusText);
         }
     }
-
+  }
+  catch (e) {
+    console.error(e);
+    res.send(`Something went wrong while running Puppeteer: ${e}`);
+  } finally {
     await browser.close();
   }
 };
