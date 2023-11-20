@@ -49,6 +49,8 @@ const scrapeLogic = async (res) => {
         }
         return totalTimings;
     });
+    console.log(totalTimings);
+    res.send(totalTimings);
 
     // Trigger the Webhook
     if (totalTimings.length > 0) {
