@@ -32,11 +32,11 @@ const scrapeLogic = async (res) => {
         let bottomRow = document.querySelector('#calendar-0 > calendar > div.au-target.calendar-container > div.table-responsive.calendar > table > tbody > tr:nth-child(2)');
         let dates = document.querySelector('#calendar-0 > calendar > div.au-target.calendar-container > div.table-responsive.calendar > table > thead > tr.cal-day-row');
         let totalTimings = "";
-        for (let i = 1; i < topRow.childNodes.length - 2; i++) {
+        for (let i = 1; i < 30; i++) {
             let timings = "";
             let optionsMorning = topRow.childNodes[i].childNodes
             let optionsAfternoon = bottomRow.childNodes[i].childNodes
-            for (let j = 1; j < 30; j++) {
+            for (let j = 1; j < optionsMorning.length; j++) {
                 timings += optionsMorning[j].innerText + "; ";
             }
             for (let j = 1; j < optionsAfternoon.length - 2; j++) {
