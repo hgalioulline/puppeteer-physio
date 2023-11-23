@@ -36,7 +36,7 @@ const scrapeLogic = async (res) => {
             let timings = "";
             let optionsMorning = topRow.childNodes[i].childNodes
             let optionsAfternoon = bottomRow.childNodes[i].childNodes
-            for (let j = 1; j < optionsMorning.length; j++) {
+            for (let j = 1; j < optionsMorning.length - 2; j++) {
                 timings += optionsMorning[j].innerText + "; ";
             }
             for (let j = 1; j < optionsAfternoon.length - 2; j++) {
